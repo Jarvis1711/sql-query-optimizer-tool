@@ -1,25 +1,20 @@
-# Proof of Concept - SQL Query Optimizer Tool
+# Proof of Concept - Sql Query Optimizer Tool
 
-## Scope
-- App category: Social & Community
-- Entity model: Sql Query Community Event
-- Deployable stack: Flask + SQLAlchemy + Gunicorn + Docker + CI
+## Deployment Readiness
+- Web app + API routes active
+- Container and PaaS deployment files included
+- Automated test suite and CI workflow included
 
-## Dynamic Field Configuration
-- Host: `host` (text)
-- Expected Attendees: `attendees` (number)
-- Community Notes: `community_notes` (textarea)
-
-## Run Evidence Commands
+## Smoke Commands
 ```bash
-python app.py
+python run.py
 curl http://localhost:5000/api/health
 curl http://localhost:5000/api/schema
-curl -X POST http://localhost:5000/api/records   -H "Content-Type: application/json"   -d '{"title":"Demo Record","status":"open","payload":{"host":"Demo value","attendees":12,"community_notes":"seed note"}}'
+curl -X POST http://localhost:5000/api/items   -H "Content-Type: application/json"   -d '{"title":"Phase3 Demo","status":"planned","payload":{"repo":"sample","risk_score":5,"technical_notes":"notes"}}'
 curl http://localhost:5000/api/metrics
 ```
 
 ## Metadata
-- Idea number: 85
-- Generated UTC: 2026-03-24T15:52:22.432368+00:00
-- Status: Phase-2 complete
+- Generated UTC: 2026-03-24T16:15:11.995893+00:00
+- Phase: 3
+- Domain: Developer Experience
